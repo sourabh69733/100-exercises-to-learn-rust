@@ -17,7 +17,9 @@
 // You can also find solutions to all exercises in the `solutions` git branch.
 fn greeting() -> &'static str {
     // TODO: fix me 👇
-    "I'm ready to __!"
+    const s: &str = "I'm ready to learn Rust!";
+    
+    return s
 }
 
 // Your solutions will be automatically verified by a set of tests.
