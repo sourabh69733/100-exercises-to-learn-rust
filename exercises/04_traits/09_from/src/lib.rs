@@ -1,7 +1,23 @@
 // TODO: Implement the `From` trait for the `WrappingU32` type to make `example` compile.
 
+use std::convert::From;
+
 pub struct WrappingU32 {
     value: u32,
+}
+
+impl WrappingU32 {
+    fn new(p: u32) -> Self {
+        Self {
+            value: p
+        }
+    }
+}
+
+impl From<u32> for WrappingU32 {
+    fn from(p: u32) -> WrappingU32 {
+        return WrappingU32::new(p)
+    }
 }
 
 fn example() {
